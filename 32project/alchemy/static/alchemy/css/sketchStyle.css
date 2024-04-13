@@ -1,0 +1,133 @@
+@font-face {
+  src: url("../fonts/AppleSDGothicNeoB.ttf");
+  font-family: "apple";
+}
+
+body {
+  font-family: apple;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 10px 20px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.header-logo {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #333;
+}
+
+.title {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+/* 나머지 스타일은 이전과 동일하므로 생략 */
+
+
+h1 {
+  margin: 0;
+}
+
+.content {
+  display: flex;
+  justify-content: space-evenly; /* 공간을 균등하게 분배 */
+  margin-top: 20px;
+  width: 100%; /* 컨텐츠 영역이 전체 너비를 차지하도록 설정 */
+}
+
+.upload-area, .result-area {
+  width: 35%; /* 각 영역이 전체 너비의 35%를 차지 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.image-preview {
+  width: 100%; /* 부모 요소의 100%, 여기서는 35% 영역 */
+  padding-top: 73.33%; /* width의 35%에 대한 비율로 높이를 설정 (16:9 비율 기준) */
+  border: 2px solid #68b4e7; /* 파란색 실선 테두리 */
+  border-radius: 15px; /* 각진 모서리를 부드럽게 */
+  background-color: #ffffff;
+  box-sizing: border-box; /* 패딩과 테두리를 포함한 너비 유지 */
+}
+
+.btn {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 2px solid #009BFF; /* 버튼 테두리도 파란색으로 */
+  border-radius: 5px; /* 버튼의 모서리를 약간 부드럽게 */
+  background-color: white;
+  color: #009BFF; /* 버튼 내 글자 색상 */
+  outline: none; /* 클릭 시 나타나는 윤곽선 제거 */
+  transition: background-color 0.3s, color 0.3s; /* 버튼에 애니메이션 효과 추가 */
+}
+
+.btn:hover {
+  background-color: #009BFF; /* 호버 시 배경 색상 변경 */
+  color: white; /* 호버 시 글자 색상 변경 */
+}
+
+.filebox label {
+  display: inline-block;
+  padding: .5em .75em;
+  color: #009BFF;
+  border: 2px solid #009BFF; /* 버튼 테두리도 파란색으로 */
+  font-size: inherit;
+  line-height: normal;
+  vertical-align: middle;
+  background-color: #fdfdfd;
+  cursor: pointer;
+  border: 1px solid #ebebeb;
+  border-bottom-color: #e2e2e2;
+  border-radius: .25em;
+}
+
+.filebox input[type="file"] {  /* 파일 필드 숨기기 */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip:rect(0,0,0,0);
+  border: 0;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+
+.image-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+}
+

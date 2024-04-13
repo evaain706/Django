@@ -1,0 +1,27 @@
+{% extends 'alchemy/base.html' %}
+{% load static %}
+
+{% block title %}
+Image to Art - Image Alchemy
+{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'alchemy/css/restoreStyle.css' %}">
+{% endblock css %}
+
+{% block content %}
+<main>
+    <h1 class="title">추억을 기억으로 가져와보세요!</h1>
+    <form id="imageForm" enctype="multipart/form-data">
+        <input type="file" id="contentImage" name="content_image">
+        <button type="submit">복구시키기</button>
+        <button id="downloadButton" style="display: none;">결과이미지 다운로드</button>
+    </form>
+    <div id="resultContainer"></div>
+    <script type="module" src="{% static 'alchemy/js/restoremode.js' %}"></script>
+</main>
+{% endblock content %}
+
+{% block scripts %}
+<script src="{% static 'js/nstModeScript.js' %}"></script>
+{% endblock scripts %}

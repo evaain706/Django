@@ -1,0 +1,42 @@
+{% extends 'alchemy/base.html' %}
+{% load static %}
+
+{% block title %}
+Image to Art - Image Alchemy
+{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'alchemy/css/nstModeStyle.css' %}">
+{% endblock css %}
+
+{% block content %}
+<main>
+    <h1 class="title">이미지에 예술을 더해보세요!</h1>
+    <form id="imageForm" enctype="multipart/form-data">
+        <label for="contentImage">원본 이미지:</label>
+        <input type="file" id="contentImage" name="content_image">
+        
+
+        <label for="styleImage">스타일 적용에 사용할 이미지:</label>
+        <input type="file" id="styleImage" name="style_image">
+        <button type="submit">이미지에 스타일더하기</button>
+        <button id="downloadButton" style="display: none;">결과이미지 다운로드</button>
+    </form>
+    <div id="resultContainer"></div>
+    <script type="module" src="{% static 'alchemy/js/nstmode.js' %}"></script>
+</main>
+{% endblock content %}
+
+{% block scripts %}
+<script src="{% static 'js/nstModeScript.js' %}"></script>
+{% endblock scripts %}
+
+
+
+
+
+
+
+
+
+

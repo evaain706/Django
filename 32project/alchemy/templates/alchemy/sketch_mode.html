@@ -1,0 +1,38 @@
+{% extends 'alchemy/base.html' %}
+{% load static %}
+
+{% block title %}
+Go to memory - Image Alchemy
+{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'alchemy/css/sketchStyle.css' %}">
+{% endblock css %}
+
+{% block content %}
+<main>
+    <h1 class="title">그리고 싶은 이미지를 넣어보세요!</h1>
+    <div class="content">
+        <div class="upload-area">
+            <!-- 업로드할 이미지를 보여줄 공간 -->
+            
+           <div class="filebox">
+  <label for="imageInput">이미지 업로드 및 전송</label>
+  <input type="file" id="imageInput">
+</div>
+           
+        </div>
+        <div class="result-area">
+            <!-- 결과 이미지를 보여줄 공간 -->
+            <div id="result" class="image-pre"></div>
+          
+        </div>
+       
+    </div>
+    <script type="module" src="{% static 'alchemy/js/sketchmode.js' %}"></script>
+</main>
+{% endblock content %}
+
+{% block scripts %}
+
+{% endblock scripts %}

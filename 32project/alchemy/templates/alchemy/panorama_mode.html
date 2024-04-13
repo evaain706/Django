@@ -1,0 +1,40 @@
+{% extends 'alchemy/base.html' %}
+{% load static %}
+
+{% block title %}
+Image to Art - Image Alchemy
+{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'alchemy/css/panoramaStyle.css' %}">
+{% endblock css %}
+
+{% block content %}
+<main>
+    <h1>조각을 기억으로 합쳐보세요!</h1>
+    <form id="imageForm" method="post" enctype="multipart/form-data">
+        <input type="file" name="panorama_images" id="imageInput" multiple>
+        <button type="button" id="uploadButton">사진업로드</button>
+        <button type="button" id="sendButton">합치기!</button>
+    </form>
+    <div id="resultContainer"></div>
+
+    <script type="module" src="{% static 'alchemy/js/panorama.js' %}"></script>
+</main>
+{% endblock content %}
+
+{% block scripts %}
+<script src="{% static 'js/panoramaModeScript.js' %}"></script>
+{% endblock scripts %}
+
+
+
+
+
+
+
+
+
+
+
+

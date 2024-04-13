@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이력 - Image Alchemy</title>
+    <link rel="stylesheet" href="{% static 'alchemy/css/historyStyle.css' %}"> <!-- 공통 스타일시트 -->
+</head>
+<body>
+    <header>
+        <a href="{% url 'index' %}" class="header-logo">Image Alchemy</a>
+    </header>
+    <main>
+        <h1 class="title">처리한 이미지 목록</h1>
+        <div id="imageContainer" class="history-container">
+            <!-- Firebase에서 가져온 이미지가 추가될 곳 -->
+        </div>
+    </main>
+    <footer>
+        <!-- 공통 푸터 (필요한 경우) -->
+    </footer>
+   
+</body>
+<script type="module" src="{% static 'alchemy/js/historyScript.js' %}"></script>
+</html>

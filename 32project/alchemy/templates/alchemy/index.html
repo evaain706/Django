@@ -1,0 +1,122 @@
+{% load static %} 
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Class note</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="{% static 'alchemy/css/indexStyle.css' %}" />
+  </head>
+
+  <body>
+    <button id="toggle-btn">☰</button>
+    <div id="sidebar">
+      <ul>
+        <li><button id="logoutButton" class="menu-btn" onclick="logoutFunction()">로그아웃</button></li>
+        <li><button class="menu-btn" onclick="recordFunction()">기록</button></li>
+      <!-- 추가 메뉴 항목 -->
+      </ul>
+    </div>
+
+    <h1>Image Alchemy</h1>
+    <h3>이미지에 감성을 더하다.</h3>
+    <div class="food-container">
+  <!-- 메뉴 항목들 -->
+        <div class="menu nst">
+          <p class="menu-name">Image to Art</p>
+          <ul>
+            <li class="list-sub">이미지를 넘어 예술로.</li>
+            <li class="no-marker">
+        <div class="image-container2">
+          <img src="{% static 'alchemy/images/nst12.png' %}"
+               alt="스타일 적용 할 이미지"
+               class="restored-image" />
+          <img src="{% static 'alchemy/images/nst11.png' %}"
+               alt="스타일 적용 후 이미지"
+               class="restored-image" />
+        </div>
+      </li>
+      <img class="marker" src="{% static 'alchemy/images/greencheck.png' %}" />
+      <li class="list-add">
+        내가 찍은 이미지에 여러가지 미적인 스타일을 더해 나만의 예술 작품을 만들어보세요.
+      </li>
+    </ul>
+    <a href="{% url 'nst' %}"  class="link menu1">Let's do art!</a>
+  </div>
+    <!-- 복원 시작 -->
+    <div class="menu rebirth">
+      <p class="menu-name">Go to memory</p>
+      <ul>
+          <li class="list-sub">추억을 선명하게.</li>
+          <li class="no-marker">
+              <div class="image-container">
+                  <img src="{% static 'alchemy/images/replace.png' %}"
+                       alt="복원 이미지"
+                       class="restored-image2" />
+              </div>
+          </li>
+          <img class="marker" src="{% static 'alchemy/images/greencheck.png' %}" />
+          <li class="list-add">
+              오래된 추억, 화질이 안 좋은 사진을 다시 내 기억속으로 선명하게
+              간직하세요.
+          </li>
+      </ul>
+      <a href="{% url 'restore' %}" class="link menu2">Bring back memory!</a>
+
+  </div>  
+    <!-- 파노라마 시작 -->
+    <div class="menu panorama">
+      <p class="menu-name">Frame to Fusion</p>
+      <ul>
+          <li class="list-sub">작은게 모여 전체로.</li>
+          <li class="no-marker">
+              <div class="image-container">
+                  <img src="{% static 'alchemy/images/panorama1.png' %}"
+                       alt="적용 전 이미지"
+                       class="restored-image" />
+                  <img src="{% static 'alchemy/images/panorama2.png' %}"
+                       alt="적용 후 이미지"
+                       class="restored-image" />
+              </div>
+          </li>
+          <img class="marker" src="{% static 'alchemy/images/greencheck.png' %}" />
+          <li class="list-add">
+              한눈에 담기 힘든 풍경을 만들어보세요. 퍼즐 맞추듯 쉽게 만듭니다.
+          </li>
+      </ul>
+      <a href="{% url 'panorama' %}" class="link menu3">to the panorama!</a>
+
+  </div>
+  
+    <!-- 스케치 시작 -->
+    <div class="menu sketch">
+      <p class="menu-name">Sketch your image</p>
+      <ul>
+          <li class="list-sub">이미지를 스케치로</li>
+          <li class="no-marker">
+              <div class="image-container">
+                  <img src="{% static 'alchemy/images/rdj1.png' %}"
+                       alt="적용 전 이미지"
+                       class="restored-image" />
+                  <img src="{% static 'alchemy/images/rdj2.png' %}"
+                       alt="적용 후 이미지"
+                       class="restored-image" />
+              </div>
+          </li>
+          <img class="marker" src="{% static 'alchemy/images/greencheck.png' %}" />
+          <li class="list-add">
+              그려보고 싶은 이미지를 언제든지 스케치화해서 그려보세요
+          </li>
+      </ul>
+      <a href="{% url 'sketch' %}" class="link menu4">to the Sketch!</a>
+    </div>
+    <script src="{% static 'alchemy/js/sidebarToggle.js' %}"></script>
+    <div class="clearfix"></div>
+  </div>
+  <script type="module" src="{% static 'alchemy/js/logout.js' %}"></script>
+  <script type="module" src="{% static 'alchemy/js/Userstate.js' %}"></script>
+  <script>
+    
+  </script>
+</body>
+</html>
